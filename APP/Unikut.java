@@ -38,11 +38,11 @@ public class Unikut {
         }
     }
 
-    public void verifyAccount (String username){
+    public void verifyAccount (String username, String password){
         for (Account vAccount : accounts){
             if (vAccount.getUsername() == username){
                 for (Password vPass : passwords){
-                    if (vPass.getPass() == Password){
+                    if (vPass.getPass() == password){
                         vAccount.login();
                     }
                 }
