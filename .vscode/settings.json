@@ -1,6 +1,9 @@
 {
     "java.project.sourcePaths": [
-        "APP",
-        "GUI"
+        "executavel",
+        "model",
+        "exceptions",
+        "view",
+        "controller"
     ]
 }
