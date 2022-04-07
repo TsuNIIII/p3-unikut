@@ -3,5 +3,5 @@
 GRUPO:
 > Lucas Matos<br>
 > Roosevelt Júnior<br>
-> Ricardo <br>
+> Ricardo Costa<br>
 > Vinicius Lôbo<br>
