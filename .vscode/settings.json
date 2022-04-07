@@ -1,9 +1,0 @@
-{
-    "java.project.sourcePaths": [
-        "executavel",
-        "model",
-        "exceptions",
-        "view",
-        "controller"
-    ]
-}
