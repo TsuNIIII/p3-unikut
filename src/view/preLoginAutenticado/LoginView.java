@@ -16,10 +16,11 @@ public class LoginView {
         UsuarioAdmView viewUsuarioAdm = new UsuarioAdmView();
 
         in.nextLine();
-        System.out.println("Nome de login: ");
+        System.out.print("Nome de login: ");
         login = in.next();
-        System.out.println("Senha: ");
+        System.out.print("Senha: ");
         senha = in.next();
+        System.out.println("");
         try {
             controllerPrincipal.login(login, senha);
             estadoDeLogado = true;
@@ -37,7 +38,8 @@ public class LoginView {
                 viewUsuarioAdm.usuario(logado, controllerPrincipal, in);
             }
         } else {
-            System.out.println("Login ou senha inválidos. Tente novamente.");
+            System.out.println("Login ou Senha inválidos. Tente novamente.");
+            System.out.println("");
         }
     }
 }

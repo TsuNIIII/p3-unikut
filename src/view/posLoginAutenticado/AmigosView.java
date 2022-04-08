@@ -14,19 +14,25 @@ public class AmigosView {
         switch (op) {
             case 1:// Adicionar amigo
                 in.nextLine();
-                System.out.println("Informe o login do usuário a ser adicionado:");
+                System.out.print("Informe o login do usuário a ser adicionado: ");
                 login = in.next();
                 Thread t = new Thread(new Runnable() {
                     public void run() {
                         try {
                             boolean pedidoPendente = controllerPrincipal.adicionarAmigo(login, logado);
                             if (pedidoPendente) {
+                                System.out.println("");
                                 System.out.println("Pedido de amizade enviado. Aguardando aceitação.");
+                                System.out.println("");
                             } else {
+                                System.out.println("");
                                 System.out.println("Pedido de amizade aceito! Vocês agora são amigos.");
+                                System.out.println("");
                             }
                         } catch (Exception e) {
+                            System.out.println("");
                             System.out.println(e.getMessage());
+                            System.out.println("");
                         }
                     }
                 });

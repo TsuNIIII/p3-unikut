@@ -44,12 +44,12 @@ public class Home {
     }
 
     public void menuInicial() {
-        System.out.println("BEM-VINDO AO UNIKUT, A MAIS NOVA FORMA DE MANTER A UNICAP MAIS PERTINHO DE VOCÊ.");
+        System.out.println("Bem Vindo à UNIKUT, A Rede Social mais Antisocial do Mundo");
 
-        System.out.println("Tecle - 1 – Para fazer parte da comunidade do UNIKUT.");
-        System.out.println("Tecle - 2 – Para logar agora mesmo, caso já faça parte da comunidade.");
-        System.out.println("Tecle - 3 - Para criar um novo administrador.");
-        System.out.println("Tecle 0 – para sair do programa.");
+        System.out.println("1 - Cadastrar");
+        System.out.println("2 - Login");
+        System.out.println("3 - Cadastrar Admin");
+        System.out.println("0 - Sair");
     }
 
 }

@@ -124,7 +124,7 @@ public class Usuario {
 
     public String listaDePendentes() throws Exception {// Exibir pendentes
         String list = "";
-        if (isEmpty(amigos)) {
+        if (isEmpty(pendentes)) {
             throw exceptionsModelFactory.getException(3,"Lista vazia");
         } else {
             for (Usuario u : pendentes) {
