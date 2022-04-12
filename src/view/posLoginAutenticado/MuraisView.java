@@ -22,14 +22,16 @@ public class MuraisView {
                         try {
                             String exibirMural = controllerPrincipal.exibirMural(login);
                             System.out.println("Mural:");
-                            System.out.println(exibirMural);
+                            System.out.println(exibirMural+ "\n");
+                
                       
                         } catch (Exception e) {
-                            System.out.println(e.getMessage());
+                            System.out.println(e.getMessage()+ "\n");
                         }
                     }
                 );
-                t.start();
+               
+                t.run();
                 break;
 
             case 2: // Criar Mural
@@ -37,17 +39,18 @@ public class MuraisView {
                 in.nextLine();
                 mural = in.nextLine();
                 controllerPrincipal.enviarMural(logado, mural);
-                System.out.println("Mural criado com sucesso.");
+                System.out.println("Mural criado com sucesso.\n");
                 break;
 
             case 3:// excluir mural
                 Thread t1 = new Thread( ()->{  try {
                             controllerPrincipal.excluirMural(logado);
-                            System.out.println("Seu Mural foi excluido com sucesso.");
+                            System.out.println("Seu Mural foi excluido com sucesso.\n");
                         } catch (Exception e) {
-                            System.out.println(e.getMessage());
+                            System.out.println(e.getMessage()+ "\n");
                         } } );
-                t1.start();
+                      
+                t1.run();
                 break;
         }
     }

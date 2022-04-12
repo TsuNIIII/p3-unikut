@@ -20,13 +20,13 @@ public class RecadosView {
                             String exibirLista = controllerPrincipal.exibirRecados(logado);
                             System.out.println("Mensagens recentes serão sempre as que estão mais em baixo.");
                             System.out.println("Recados:");
-                            System.out.println(exibirLista);
+                            System.out.println(exibirLista+ "\n");
                         } catch (Exception e) {
-                            System.out.println(e.getMessage());
+                            System.out.println(e.getMessage()+ "\n");
                         }
                     }
                 });
-                t3.start();
+                t3.run();
                 break;
 
             case 2: // Enviar recado /////
@@ -49,9 +49,9 @@ public class RecadosView {
                 if (op == 1) {
                     try {
                         controllerPrincipal.enviarRecado(logado, login, recado);
-                        System.out.println("Mensagem enviada.");
+                        System.out.println("Mensagem enviada.\n");
                     } catch (Exception e) {
-                        System.out.println(e.getMessage());
+                        System.out.println(e.getMessage()+ "\n");
                     }
                 } else {
                     in.nextLine();
@@ -59,9 +59,9 @@ public class RecadosView {
                     palavraChave = in.next();
                     try {
                         controllerPrincipal.enviarRecado(logado, login, recado, palavraChave);
-                        System.out.println("Mensagem enviada.");
+                        System.out.println("Mensagem enviada.\n");
                     } catch (Exception e) {
-                        System.out.println(e.getMessage());
+                        System.out.println(e.getMessage()+ "\n");
                     }
                 }
                 break;
@@ -70,14 +70,14 @@ public class RecadosView {
                     public void run() {
                         try {
                             controllerPrincipal.excluirRecados(logado);
-                            System.out.println("Seus recados foram todos excluídos.");
+                            System.out.println("Seus recados foram todos excluídos.\n");
                         } catch (Exception e) {
-                            System.out.println(e.getMessage());
+                            System.out.println(e.getMessage()+ "\n");
 
                         }
                     }
                 });
-                t1.start();
+                t1.run();
                 break;
 
             case 4: /////
@@ -98,11 +98,12 @@ public class RecadosView {
                             String result = controllerPrincipal.decodificarRecado(logado, indiceMensagem, palavraChave);
                             System.out.println(result + "\n");
                         } catch (Exception e) {
-                            System.out.println(e.getMessage());
+                            System.out.println(e.getMessage()+ "\n");
                         }
                     }
                 });
-                t.start();
+                t.run();
+    
                 break;
         }
     }

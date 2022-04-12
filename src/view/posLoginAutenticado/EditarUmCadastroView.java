@@ -19,7 +19,7 @@ public class EditarUmCadastroView {
                     nome = "convidado";
                 }
                 controllerPrincipal.editarCadastro(login, senha, nome);
-                System.out.println("Perfil editado com sucesso.");
+                System.out.println("Perfil editado com sucesso.\n");
                 break;
             case 2:// Editar senha
                 nome = null;
@@ -27,7 +27,7 @@ public class EditarUmCadastroView {
                 System.out.println("Digite a nova senha: ");
                 senha = in.next();
                 controllerPrincipal.editarCadastro(login, senha, nome);
-                System.out.println("Perfil editado com sucesso.");
+                System.out.println("Perfil editado com sucesso.\n");
                 break;
             case 3:// Editar nome e senha
                 in.nextLine();
@@ -39,7 +39,7 @@ public class EditarUmCadastroView {
                 System.out.println("Digite a nova senha: ");
                 senha = in.next();
                 controllerPrincipal.editarCadastro(login, senha, nome);
-                System.out.println("Perfil editado com sucesso.");
+                System.out.println("Perfil editado com sucesso.\n");
                 break;
         }
     }

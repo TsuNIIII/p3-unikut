@@ -80,14 +80,14 @@ public class UsuarioView extends MenuView {
     }
 
     public void menuAmigos() {
-        System.out.println("Menu de amigos:");
+        System.out.println("\nMenu de amigos:");
         System.out.println("1 - Adicionar amigos");
         System.out.println("2 - Listar amigos ou pedidos de amizade pendentes");
         System.out.println("0 - Voltar");
     }
 
     public void menuRecados() {
-        System.out.println("Menu de recados:");
+        System.out.println("\nMenu de recados:");
         System.out.println("1 - Ver recados");
         System.out.println("2 - Mandar um recado");
         System.out.println("3 - Excluir recados");
@@ -96,7 +96,7 @@ public class UsuarioView extends MenuView {
     }
 
     public void menuMural() {
-        System.out.println("Menu de Murais:");
+        System.out.println("\nMenu de Murais:");
         System.out.println("1 - Ver Murais");
         System.out.println("2 - Criar Mural");
         System.out.println("3 - Excluir Seu Mural");
@@ -104,15 +104,15 @@ public class UsuarioView extends MenuView {
     }
 
     public void menuMatches() {
-        System.out.println("Menu de Matches:");
+        System.out.println("\nMenu de Matches:");
         System.out.println("1 - Ver Matches");
         System.out.println("2 - Adicionar um Match");
-        System.out.println("3 - Meus Matches");
+        System.out.println("3 - Meus Matches Pendentes");
         System.out.println("0 - Voltar");
     }
 
     public void menuEditar() {
-        System.out.println("O que deseja editar? ");
+        System.out.println("\nO que deseja editar? ");
         System.out.println("1 - Apenas o Nome;");
         System.out.println("2 - Apenas a senha;");
         System.out.println("3 - Nome e senha.");
@@ -120,8 +120,8 @@ public class UsuarioView extends MenuView {
 
     public void menu() {
         System.out.println("Funções disponíveis:");
-        System.out.println("1 – Editar perfil");
-        System.out.println("2 – Amigos");
+        System.out.println("1 - Editar perfil");
+        System.out.println("2 - Amigos");
         System.out.println("3 - Recados");
         System.out.println("4 - Murais");
         System.out.println("5 - Match");

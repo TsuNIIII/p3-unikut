@@ -21,22 +21,20 @@ public class AmigosView {
                         try {
                             boolean pedidoPendente = controllerPrincipal.adicionarAmigo(login, logado);
                             if (pedidoPendente) {
-                                System.out.println("");
-                                System.out.println("Pedido de amizade enviado. Aguardando aceitação.");
-                                System.out.println("");
+                                System.out.println("\nPedido de amizade enviado. Aguardando aceitação.\n");
+                             
                             } else {
-                                System.out.println("");
-                                System.out.println("Pedido de amizade aceito! Vocês agora são amigos.");
-                                System.out.println("");
+                              System.out.println("\nPedido de amizade aceito! Vocês agora são amigos.\n");
+                                
                             }
                         } catch (Exception e) {
-                            System.out.println("");
-                            System.out.println(e.getMessage());
-                            System.out.println("");
+                          
+                            System.out.println("\n"+e.getMessage()+ "\n");
+                           
                         }
                     }
                 });
-                t.start();
+                t.run();
                 break;
 
             case 2:
@@ -58,7 +56,7 @@ public class AmigosView {
                                     System.out.println("Lista de amigos: ");
                                     System.out.println(exibirLista);
                                 } catch (Exception e) {
-                                    System.out.println(e.getMessage());
+                                    System.out.println(e.getMessage()+ "\n");
                                 }
                             }
                         });
@@ -73,12 +71,13 @@ public class AmigosView {
                                     System.out.println(
                                             "Envie convites para remover a pendência e que vocês sejam amigos!");
                                     System.out.println("Há convites de amizade pendentes de:");
-                                    System.out.println(exibirLista1);
+                                    System.out.println(exibirLista1+ "\n");
                                 } catch (Exception e) {
-                                    System.out.println(e.getMessage());
+                                    System.out.println(e.getMessage()+ "\n");
                                 }
                             }
                         });
+                       
                         t2.run();
                         break;
                 }

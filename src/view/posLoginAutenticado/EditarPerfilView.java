@@ -19,7 +19,7 @@ public class EditarPerfilView {
                     nome = "convidado";
                 }
                 controller.editarCadastro(logado, senha, nome);
-                System.out.println("Seu cadastro foi atualizado.");
+                System.out.println("Seu cadastro foi atualizado.\n");
 
                 break;
             case 2:// Editar senha
@@ -28,7 +28,7 @@ public class EditarPerfilView {
                 System.out.println("Digite a nova senha: ");
                 senha = in.next();
                 controller.editarCadastro(logado, senha, nome);
-                System.out.println("Seu cadastro foi atualizado.");
+                System.out.println("Seu cadastro foi atualizado.\n");
                 break;
             case 3:// Editar nome e senha
                 in.nextLine();
@@ -40,7 +40,7 @@ public class EditarPerfilView {
                 System.out.println("Digite a nova senha: ");
                 senha = in.next();
                 controller.editarCadastro(logado, senha, nome);
-                System.out.println("Seu cadastro foi atualizado.");
+                System.out.println("Seu cadastro foi atualizado.\n");
                 break;
         }
     }

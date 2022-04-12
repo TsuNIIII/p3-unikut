@@ -21,13 +21,14 @@ public class MatchView {
                         try {
                             String exibirListas1 = controllerPrincipal.exibirMatches(logado);
                             System.out.println("Lista de matches:");
-                            System.out.println(exibirListas1);
+                            System.out.println(exibirListas1+ "\n");
                         } catch (Exception e) {
-                            System.out.println(e.getMessage());
+                            System.out.println(e.getMessage()+ "\n");
                         }
                     }
                 });
-                t2.start();
+   
+                t2.run();
                 break;
 
             case 2:
@@ -44,11 +45,12 @@ public class MatchView {
                                 System.out.println("MATCH! Agora vocês dois tem um match.");
                             }
                         } catch (Exception e) {
-                            System.out.println(e.getMessage());
+                            System.out.println(e.getMessage()+ "\n");
                         }
                     }
                 });
-                t.start();
+               
+                t.run();
                 break;
 
             case 3:// matches não-mútuos
@@ -56,14 +58,15 @@ public class MatchView {
                     public void run() {
                         try {
                             String ExibirMatchs = controllerPrincipal.exibirMeusMatches(logado);
-                            System.out.println("Meus matches: ");
-                            System.out.println(ExibirMatchs);
+                            System.out.println("Aguardando Match Mutuo: ");
+                            System.out.println(ExibirMatchs+ "\n");
                         } catch (Exception e) {
-                            System.out.println(e.getMessage());
+                            System.out.println(e.getMessage()+ "\n");
                         }
                     }
                 });
-                t1.start();
+               
+                t1.run();
                 break;
 
         }
