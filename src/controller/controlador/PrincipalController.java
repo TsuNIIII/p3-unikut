@@ -57,7 +57,7 @@ public class PrincipalController {
         }
     }
 
-//--------------RICARDO-----------------
+//--------------RICARDO----------------
 
     public void login(String login, String senha) throws Exception { // Login do
                                                                                                           // usuário
