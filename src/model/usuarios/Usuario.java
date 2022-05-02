@@ -17,6 +17,8 @@ public class Usuario {
 
     boolean adm;
 
+    //-----------ROOSEVELT------------
+
     public Usuario(String login, String senha, String nomeDeUsuario) {
         this.login = login;
         this.senha = senha;
