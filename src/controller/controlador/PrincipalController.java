@@ -9,8 +9,6 @@ import model.usuarios.*;
 import java.util.ArrayList;
 import java.util.List;
 
-
-
 public class PrincipalController {
     public List<Usuario> usuarios;
 
@@ -58,6 +56,8 @@ public class PrincipalController {
             }
         }
     }
+
+//--------------RICARDO-----------------
 
     public void login(String login, String senha) throws Exception { // Login do
                                                                                                           // usuário
