@@ -31,7 +31,13 @@ public class MuraisView {
                     }
                 );
                
-                t.run();
+                //t.run();
+                t.start();
+                try {
+                    t.join();          
+                } catch (InterruptedException e) {
+                   
+                }
                 break;
 
             case 2: // Criar Mural
@@ -50,7 +56,13 @@ public class MuraisView {
                             System.out.println(e.getMessage()+ "\n");
                         } } );
                       
-                t1.run();
+               // t1.run();
+               t1.start();
+               try {
+                   t1.join();          
+               } catch (InterruptedException e) {
+                  
+               }
                 break;
         }
     }
