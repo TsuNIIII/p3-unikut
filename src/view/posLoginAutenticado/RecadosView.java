@@ -14,7 +14,7 @@ public class RecadosView {
             case 0:// Sair
                 break;
             case 1:// Exibir recados
-                Thread t3 = new Thread(new Runnable() {
+                Thread t = new Thread(new Runnable() {
                     public void run() {
                         try {
                             String exibirLista = controllerPrincipal.exibirRecados(logado);
@@ -26,7 +26,13 @@ public class RecadosView {
                         }
                     }
                 });
-                t3.run();
+               // t.run();
+               t.start();
+               try {
+                   t.join();          
+               } catch (InterruptedException e) {
+                  
+               }
                 break;
 
             case 2: // Enviar recado /////
@@ -36,7 +42,7 @@ public class RecadosView {
                 System.out.println("Escreva seu recado: ");
                 in.nextLine();
                 recado = in.nextLine();
-                System.out.println("O recado será enviado como:");///// {
+                System.out.println("O recado será enviado como:");
                 System.out.println("1 - Mensagem comum");
                 System.out.println("2 - Mensagem secreta");
                 op = in.nextInt();
@@ -45,7 +51,7 @@ public class RecadosView {
                     System.out.println("1 - Mensagem comum");
                     System.out.println("2 - Mensagem secreta");
                     op = in.nextInt();
-                } ///// }
+                } 
                 if (op == 1) {
                     try {
                         controllerPrincipal.enviarRecado(logado, login, recado);
@@ -77,12 +83,18 @@ public class RecadosView {
                         }
                     }
                 });
-                t1.run();
+               // t1.run();
+                t1.start();
+                try {
+                    t1.join();          
+                } catch (InterruptedException e) {
+                   
+                }
                 break;
 
             case 4: /////
                 in.nextLine();
-                Thread t = new Thread(new Runnable() {
+                Thread t2 = new Thread(new Runnable() {
                     public void run() {
                         try {
                             String exibirLista = controllerPrincipal.exibirRecados(logado);
@@ -102,7 +114,13 @@ public class RecadosView {
                         }
                     }
                 });
-                t.run();
+                //t2.run();
+                t2.start();
+                try {
+                    t2.join();          
+                } catch (InterruptedException e) {
+                   
+                }
     
                 break;
         }

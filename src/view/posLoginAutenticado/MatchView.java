@@ -1,10 +1,6 @@
 package view.posLoginAutenticado;
 
 import controller.controlador.PrincipalController;
-
-
-
-
 import java.util.Scanner;
 
 public class MatchView {
@@ -16,7 +12,7 @@ public class MatchView {
             case 0:
                 break;
             case 1:// matches mútuos
-                Thread t2 = new Thread(new Runnable() {
+                Thread t = new Thread(new Runnable() {
                     public void run() {
                         try {
                             String exibirListas1 = controllerPrincipal.exibirMatches(logado);
@@ -28,14 +24,20 @@ public class MatchView {
                     }
                 });
    
-                t2.run();
+                //t.run();
+                t.start();
+                try {
+                    t.join();          
+                } catch (InterruptedException e) {
+                   
+                }
                 break;
 
             case 2:
                 in.nextLine();// adicionar
                 System.out.println("Informe o login do usuário a ser solicitado o match:");
                 login = in.next();
-                Thread t = new Thread(new Runnable() {
+                Thread t1 = new Thread(new Runnable() {
                     public void run() {
                         try {
                             boolean matchMutuo = controllerPrincipal.adicionarMatch(login, logado);
@@ -50,11 +52,17 @@ public class MatchView {
                     }
                 });
                
-                t.run();
+                //t.run();
+                t1.start();
+                try {
+                    t1.join();          
+                } catch (InterruptedException e) {
+                   
+                }
                 break;
 
             case 3:// matches não-mútuos
-                Thread t1 = new Thread(new Runnable() {
+                Thread t2 = new Thread(new Runnable() {
                     public void run() {
                         try {
                             String ExibirMatchs = controllerPrincipal.exibirMeusMatches(logado);
@@ -65,8 +73,13 @@ public class MatchView {
                         }
                     }
                 });
-               
-                t1.run();
+               //t2.run();
+                t2.start();
+                try {
+                    t2.join();          
+                } catch (InterruptedException e) {
+                   
+                }
                 break;
 
         }

@@ -1,9 +1,6 @@
 package view.posLoginAutenticado;
 
 import controller.controlador.PrincipalController;
-
-
-
 import java.util.Scanner;
 
 public class AmigosView {
@@ -27,6 +24,7 @@ public class AmigosView {
                               System.out.println("\nPedido de amizade aceito! Vocês agora são amigos.\n");
                                 
                             }
+                            
                         } catch (Exception e) {
                           
                             System.out.println("\n"+e.getMessage()+ "\n");
@@ -34,7 +32,13 @@ public class AmigosView {
                         }
                     }
                 });
-                t.run();
+                //t.run();
+               t.start();
+               try {
+                t.join();          
+            } catch (InterruptedException e) {
+               
+            }
                 break;
 
             case 2:
@@ -60,8 +64,14 @@ public class AmigosView {
                                 }
                             }
                         });
-                        t1.run();
-
+                        //t1.run();
+                        t1.start();
+                        try {
+                            t1.join();          
+                        } catch (InterruptedException e) {
+                           
+                        }
+                        
                         break;
                     case 2: // Exibir pendentes
                         Thread t2 = new Thread(new Runnable() {
@@ -77,8 +87,13 @@ public class AmigosView {
                                 }
                             }
                         });
-                       
-                        t2.run();
+                       //t2.run();
+                        t2.start();
+                        try {
+                            t2.join();          
+                        } catch (InterruptedException e) {
+                           
+                        }
                         break;
                 }
                 break;
