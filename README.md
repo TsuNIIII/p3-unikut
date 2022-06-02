@@ -1,10 +1,10 @@
 # UNIKUT - A Rede Social Mais Anti-Social do Mundo 
 
 Desenvolvido pelos Alunos:<br>
-&emsp;• Lucas Matos<br>
-&emsp;• Roosevelt Júnior<br>
-&emsp;• Ricardo Costa<br>
-&emsp;• Vinicius Lôbo<br>
+&emsp;• [Lucas Matos](https://github.com/LucasMatos86)<br>
+&emsp;• [Roosevelt Júnior](https://github.com/rooseveltjnr)<br>
+&emsp;• [Ricardo Costa](https://github.com/Ricardocost)<br>
+&emsp;• [Vinicius Lôbo](https://github.com/TsuNIIII)<br>
 <br>
 <h2> ABOUT ME </h2>
 &emsp;Este Programa foi Desenvolvido durante a Cadeira de Programação 3 da UNICAP como um projeto de POO,<br>
